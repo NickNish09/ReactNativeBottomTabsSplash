@@ -101,7 +101,7 @@ android {
         applicationId "com.luckydives"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative56" // See note below!
+        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative57" // See note below!
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -140,6 +140,15 @@ android {
                 output.versionCodeOverride =
                         versionCodes.get(abi) * 1048576 + defaultConfig.versionCode
             }
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support' && requested.name != 'multidex') {
+            details.useVersion "${rootProject.ext.supportLibVersion}"
         }
     }
 }
