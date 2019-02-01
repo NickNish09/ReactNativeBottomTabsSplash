@@ -1,8 +1,8 @@
 import { Navigation } from "react-native-navigation";
 import Home from "./src/screens/Home";
 import Welcome from "./src/screens/Authentication/Welcome";
-import { SignIn } from "./src/screens/Authentication/SignIn";
-import { SignUp } from "./src/screens/Authentication/SignUp";
+import SignIn from "./src/screens/Authentication/SignIn";
+import SignUp from "./src/screens/Authentication/SignUp";
 
 Navigation.registerComponentWithRedux(`Home`, () => Home);
 Navigation.registerComponentWithRedux("Welcome", () => Welcome);

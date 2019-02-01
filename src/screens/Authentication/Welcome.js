@@ -10,7 +10,7 @@ export default class WelcomeScreen extends Component {
         options: {
           topBar: {
             title: {
-              text: "Pushed screen title"
+              text: screenName
             }
           }
         }
