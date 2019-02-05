@@ -16,7 +16,14 @@ Navigation.events().registerAppLaunchedListener(() => {
         children: [
           {
             component: {
-              name: "Welcome"
+              name: "Welcome",
+              options: {
+                topBar: {
+                  title: {
+                    text: "Lucky Dives"
+                  }
+                }
+              }
             }
           }
         ]
