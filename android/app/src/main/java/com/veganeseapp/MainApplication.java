@@ -1,4 +1,4 @@
-package com.luckydives;
+package com.veganeseapp;
 
 import android.app.Application;
 
