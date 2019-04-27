@@ -35,7 +35,7 @@ Navigation.events().registerAppLaunchedListener(() => {
                         rightButtons: [
                           {
                             id: "buttonOne",
-                            icon: require("./src/assets/icons/sendIcon.png"),
+                            icon: require("./src/assets/images/explore.png"),
                             color: "white"
                           }
                         ],
@@ -57,7 +57,7 @@ Navigation.events().registerAppLaunchedListener(() => {
                   textColor: "white",
                   selectedTextColor: colors.secondary,
                   selectedIconColor: colors.secondary,
-                  icon: require("./src/assets/icons/sendIcon.png")
+                  icon: require("./src/assets/images/explore.png")
                 }
               }
             }
@@ -73,7 +73,7 @@ Navigation.events().registerAppLaunchedListener(() => {
                         rightButtons: [
                           {
                             id: "buttonOne",
-                            icon: require("./src/assets/icons/sendIcon.png"),
+                            icon: require("./src/assets/images/explore.png"),
                             color: "white"
                           }
                         ],
@@ -95,7 +95,7 @@ Navigation.events().registerAppLaunchedListener(() => {
                   textColor: "white",
                   selectedTextColor: colors.secondary,
                   selectedIconColor: colors.secondary,
-                  icon: require("./src/assets/icons/sendIcon.png")
+                  icon: require("./src/assets/images/explore.png")
                 }
               }
             }
