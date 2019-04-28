@@ -9,6 +9,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import SplashScreen from "react-native-splash-screen";
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -19,6 +20,15 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class Home extends Component<Props> {
+
+    componentDidMount() {
+        // do stuff while splash screen is shown
+        // After having done stuff (such as async tasks) hide the splash screen
+        setInterval(() => {
+            SplashScreen.hide();
+        }, 3000);
+    }
+
     render() {
         return (
             <View style={styles.container}>

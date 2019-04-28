@@ -3,12 +3,15 @@ import Home from "./src/screens/Home";
 import Welcome from "./src/screens/Authentication/Welcome";
 import SignIn from "./src/screens/Authentication/SignIn";
 import SignUp from "./src/screens/Authentication/SignUp";
+import Profile from "./src/screens/Profile/Profile";
 import {colors} from "./src/styles/base";
 
 Navigation.registerComponent(`Home`, () => Home);
 Navigation.registerComponent("Welcome", () => Welcome);
 Navigation.registerComponent("SignIn", () => SignIn);
 Navigation.registerComponent("SignUp", () => SignUp);
+Navigation.registerComponent("Profile", () => Profile);
+
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setDefaultOptions({
@@ -29,7 +32,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               children: [
                 {
                   component: {
-                    name: "Welcome",
+                    name: "Home",
                     options: {
                       topBar: {
                         rightButtons: [
@@ -40,7 +43,7 @@ Navigation.events().registerAppLaunchedListener(() => {
                           }
                         ],
                         title: {
-                          text: "Wyr",
+                          text: "Perguntas",
                           color: "white"
                         },
                         background: {
@@ -53,7 +56,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               ],
               options: {
                 bottomTab: {
-                  text: "Home",
+                  text: "Perguntas",
                   textColor: "white",
                   selectedTextColor: colors.secondary,
                   selectedIconColor: colors.secondary,
@@ -67,16 +70,9 @@ Navigation.events().registerAppLaunchedListener(() => {
               children: [
                 {
                   component: {
-                    name: "Home",
+                    name: "Welcome",
                     options: {
                       topBar: {
-                        rightButtons: [
-                          {
-                            id: "buttonOne",
-                            icon: require("./src/assets/images/explore.png"),
-                            color: "white"
-                          }
-                        ],
                         title: {
                           text: "Wyr",
                           color: "white"
@@ -91,11 +87,42 @@ Navigation.events().registerAppLaunchedListener(() => {
               ],
               options: {
                 bottomTab: {
-                  text: "Index",
+                  text: "Favoritas",
                   textColor: "white",
                   selectedTextColor: colors.secondary,
                   selectedIconColor: colors.secondary,
-                  icon: require("./src/assets/images/explore.png")
+                  icon: require("./src/assets/images/star.png")
+                }
+              }
+            }
+          },
+          {
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: "Profile",
+                    options: {
+                      topBar: {
+                        title: {
+                          text: "Perfil",
+                          color: "white"
+                        },
+                        background: {
+                          color: colors.primary_dark
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              options: {
+                bottomTab: {
+                  text: "Perfil",
+                  textColor: "white",
+                  selectedTextColor: colors.secondary,
+                  selectedIconColor: colors.secondary,
+                  icon: require("./src/assets/images/profile.png")
                 }
               }
             }
